@@ -1,0 +1,301 @@
+/* 基础样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #fff9f9 0%, #f5fbff 100%);
+    color: #333;
+    min-height: 100vh;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* 头部 */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 25px 20px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(255, 182, 193, 0.1);
+}
+
+.logo {
+    margin-bottom: 10px;
+}
+
+.logo h1 {
+    font-size: 2rem;
+    color: #6a5acd;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #888;
+    font-size: 1rem;
+}
+
+/* 欢迎区 */
+.welcome {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 20px;
+}
+
+.welcome h2 {
+    color: #6a5acd;
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+}
+
+.welcome p {
+    color: #777;
+    font-size: 1.1rem;
+}
+
+/* 宠物展示区 */
+.pets-showcase h3, .pet-notes h3 {
+    color: #6a5acd;
+    margin-bottom: 25px;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.pets-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.pet-card {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.pet-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+.pet-img {
+    height: 200px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.pet-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.pet-card:hover .pet-img img {
+    transform: scale(1.05);
+}
+
+.pet-info {
+    padding: 20px;
+}
+
+.pet-name {
+    font-size: 1.4rem;
+    color: #6a5acd;
+    margin-bottom: 8px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.pet-type {
+    display: inline-block;
+    background: #f0f8ff;
+    color: #4a8cff;
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    margin-bottom: 12px;
+    text-align: center;
+    display: block;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pet-desc {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.pet-birthday {
+    color: #aaa;
+    font-size: 0.85rem;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* 养宠小记 - 竖向排列 */
+.pet-notes {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    margin: 40px 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.notes-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.note-card {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 25px;
+    background: #f8f9ff;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.note-card:hover {
+    transform: translateX(5px);
+    background: #eef2ff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.note-image {
+    width: 150px;
+    height: 150px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.note-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.note-card:hover .note-image img {
+    transform: scale(1.05);
+}
+
+.note-content {
+    flex: 1;
+}
+
+.note-content h4 {
+    color: #6a5acd;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.note-content p {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* 每张卡片添加不同的左侧边框颜色 */
+.note-card:nth-child(1) {
+    border-left: 5px solid #ff8eb4;
+}
+
+.note-card:nth-child(2) {
+    border-left: 5px solid #4a8cff;
+}
+
+.note-card:nth-child(3) {
+    border-left: 5px solid #6a5acd;
+}
+
+/* 页脚 */
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #777;
+    font-size: 0.9rem;
+    border-top: 1px solid #eee;
+    margin-top: 40px;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact {
+    color: #aaa;
+    font-size: 0.85rem;
+}
+
+/* 响应式 */
+@media (max-width: 768px) {
+    .pets-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .note-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .note-image {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .logo h1 {
+        font-size: 1.6rem;
+    }
+    
+    .welcome h2 {
+        font-size: 1.5rem;
+    }
+    
+    /* 手机端改为顶边边框 */
+    .note-card:nth-child(1),
+    .note-card:nth-child(2),
+    .note-card:nth-child(3) {
+        border-left: none;
+        border-top: 5px solid;
+    }
+    
+    .note-card:nth-child(1) {
+        border-top-color: #ff8eb4;
+    }
+    
+    .note-card:nth-child(2) {
+        border-top-color: #4a8cff;
+    }
+    
+    .note-card:nth-child(3) {
+        border-top-color: #6a5acd;
+    }
+}
